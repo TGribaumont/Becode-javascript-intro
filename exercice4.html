@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_4</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <label for="lastName">Last name : </label><input type="text" name="lastName" id="lastName"/>
+            <label for="firstName">First name : </label><input type="text" name="firstName" id="firstName"/>
+            <label for="city">City : </label><input type="text" name="city" id="city"/>
+            <input type="submit" name="send" id="send" onclick="getInputValues(document.getElementById('lastName').value,document.getElementById('firstName').value,document.getElementById('city').value)" />
+        </form>
+        <script src="js/functions.js"></script>
+    </body>
+</html>
