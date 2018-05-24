@@ -125,8 +125,8 @@ function circleArea(){
 }
 
 // Ex 03
-//var a = 3;
-//var b = 2;
+var a = 3;
+var b = 2;
 
 function multiplyBy3(x){
     var result = x * 3;
@@ -325,4 +325,80 @@ function temperatureConversion(){
 
 }
 
+// Ex 12
+function calculateBmi(weight,height){
+    alert(weight + ' ' + height);
+    var result = weight / Math.pow((height/100),2);
+    alert(result);
+    var comment = "";
+    switch(true){
+            //  moins de 16,5
+        case (result < 16.5): comment = "Severely underweight";
+            break;
+            //  16,5 <= IMC < 18,5
+        case (result >= 16.5 && result < 18.5): comment = "Underweight";
+            break;
+            //  18,5 <= IMC < 25
+        case (result >= 18.5 && result < 25): comment = "Normal (healthy weight)";
+            break;
+            //  25 <= IMC < 30
+        case (result >= 25 && result < 30): comment = "Overweight";
+            break;
+            //  30 <= IMC < 35
+        case (result >= 30 && result < 35): comment = "Moderately obese";
+            break;
+            //  35 <= IMC < 40
+        case (result >= 35 && result < 40): comment = "Severely obese";
+            break;
+            //  plus de 40
+        case (result >= 40): comment = "Morbidly Obese";
+            break;
+    }
+    var paragraph = document.getElementById("test");
+    paragraph.innerHTML = "<span>The result is \"" + comment + "\"</span><br/>";
+}
 
+function lauchBmiCalculation(){
+    var height = prompt("Please enter your height");
+    height = parseInt(height);
+    var weight = prompt("Please enter your weight");
+    weight = parseInt(weight);
+    calculateBmi(weight,height);
+}
+
+// Third series
+
+// Ex 01
+function onHover(){
+    var image = document.getElementById("image1");
+    image.src = 'images/image1_2.jpg';
+}
+
+function offHover(){
+    var image = document.getElementById("image1");
+    image.src = 'images/image1.jpg';
+}
+
+// Ex 02
+function leaveInput(){
+    alert("Thank you !");
+}
+
+// Ex 03
+function whichKey(){
+    var key = event.charCode;
+    var value = String.fromCharCode(key);
+    alert('You entered "' + value + '".');
+}
+
+// Ex 04
+function emptyFields(){
+    var form = document.getElementById("myForm");
+    var inputFirstName = document.getElementById("firstName");
+    var inputLastName = document.getElementById("lastName");
+    var inputCity = document.getElementById("city");
+    var inputs = document.getElementsByClassName("inputToEmpty");
+    inputFirstName.value = " ";
+    inputLastName.value = " ";
+    inputCity.value = " ";
+}
